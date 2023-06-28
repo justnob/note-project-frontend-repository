@@ -1,0 +1,24 @@
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a *ngIf="this.auth.isUserLoggenIn()" class="navbar-brand" routerLink="welcome/amarnath.sah">Notes</a>
+          <a *ngIf="!this.auth.isUserLoggenIn()" class="navbar-brand" routerLink="welcome">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a *ngIf="this.auth.isUserLoggenIn()" class="nav-link active" aria-current="page" routerLink="welcome/amarnath.sah">Home</a>
+                <a *ngIf="!this.auth.isUserLoggenIn()" class="nav-link active" aria-current="page" routerLink="welcome">Home</a>
+              </li>
+              <li class="nav-item">
+                <a *ngIf="this.auth.isUserLoggenIn()" class="nav-link" routerLink="notes">Notes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="logging">
+              <button *ngIf="this.auth.isUserLoggenIn()" class="btn btn-outline-danger" type="button" routerLink="logout">Logout</button>
+              <button *ngIf="!this.auth.isUserLoggenIn()" class="btn btn-outline-success" type="button" routerLink="login">Login</button>
+            </form>
+          </div>
+        </div>
+      </nav>

@@ -1,0 +1,19 @@
+<div class="container">
+    <div>
+        <h1>Note</h1>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="note.tital" class="form-control" id="exampleFormControlInput1" placeholder="You can add title here!" required>
+      </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Description</label>
+        <input type="text" [(ngModel)]="note.description" class="form-control" id="exampleFormControlInput2" placeholder="You can write description here!" required>
+      </div>
+    
+    <button  class="btn btn-success me-2"(click)=" createNoteNwe()">Save</button>
+    <button class="btn btn-danger" (click)=" cancle()">Cancle</button>
+
+</div>
